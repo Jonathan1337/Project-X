@@ -89,7 +89,7 @@ label start:
     scene frame_6
     with dissolve
     
-    darryl "ok"
+    darryl "Ok"
 
     scene frame_7
     with dissolve
@@ -174,7 +174,7 @@ label start:
     with dissolve
     pause 1.0
 
-    michael "a good worker and a good man."
+    michael "A good worker and a good man."
 
     scene frame_561
     with dissolve
@@ -195,7 +195,7 @@ label start:
     scene frame_569
     with dissolve
 
-    michael "going to go for this right now."
+    michael "Going to go for this right now."
 
     scene frame_588
     with dissolve
@@ -266,7 +266,7 @@ label start:
     with dissolve
     #pick some another print of this scene
 
-    michael "tell darryl that this
+    michael "Tell darryl that this
     is not a woman's suit?"
 
     scene frame_613
@@ -540,17 +540,17 @@ label start:
     scene frame_776
     with dissolve
 
-    darryl "all of his slack,"
+    darryl "All of his slack,"
 
     scene frame_777
     with dissolve
 
-    darryl "so I think I should be"
+    darryl "So I think I should be"
 
     scene frame_778
     with dissolve
 
-    darryl "compensated fairly by getting a raise."
+    darryl "Sompensated fairly by getting a raise."
 
     scene frame_782
     with dissolve
@@ -560,7 +560,7 @@ label start:
     scene frame_787
     with dissolve
 
-    michael "very good points.(whispering)"
+    michael "Very good points.(whispering)"
 
     scene frame_790
     with dissolve
@@ -722,7 +722,7 @@ label start:
     scene frame_918
     with dissolve
 
-    darryl "(aiming his celphone to take a picture of pay stub)"
+    darryl "(Aiming his celphone to take a picture of pay stub)"
 
     scene frame_922
     with dissolve
@@ -1326,12 +1326,12 @@ label jan_negociation:
     michael "You give me a good raise or no more sex."
 
     menu:
-        "Manter a ameaça (Arriscado)":
+        "Double down on the threat (Risky)":
             $ jan_affinity -= 5
-            $ darryl_respect -= 2
+            $ darryl_respect = 2
             $ threatened_sex = True
         
-        "Pedir desculpas imediatamente":
+        "Apologize immediately":
             $ threatened_sex = False
             $ jan_affinity += 1
             michael "I... I didn't mean that. It was Tactic Number 4. The 'Empty Threat'."
@@ -1498,8 +1498,9 @@ label jan_negociation:
         
     scene frame_1675
     with dissolve
+    pause 1.0
 
-    if jan_affinity >= 7:
+    if jan_affinity >= 5:
         jump good_ending
     else:
         jump bad_ending
@@ -1575,8 +1576,10 @@ label bad_ending:
         return 
     
     else:
-        scene frame_700
+        scene frame_769
         with dissolve
+        pause 1.0 
+
         darryl "Then I'm out. I quit."
 
     #end game
