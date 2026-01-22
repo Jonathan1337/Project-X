@@ -722,7 +722,7 @@ label start:
     scene frame_918
     with dissolve
 
-    darry "(aiming his celphone to take a picture of pay stub)"
+    darryl "(aiming his celphone to take a picture of pay stub)"
 
     scene frame_922
     with dissolve
