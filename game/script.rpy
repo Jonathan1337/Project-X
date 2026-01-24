@@ -1,48 +1,4 @@
 
-define michael = Character("Michael Scott")
-
-define darryl = Character("Darryl Philbin")
-
-define pam = Character("Pam Beesly")
-
-define kevin = Character("Kevin Malone")
-
-define philys = Character("Philys Lapin")
-
-define jim = Character("Jim Halpert")
-
-define karen = Character("Karen Filippelli")
-
-define creed = Character("Creed Bratton")
-
-define jan = Character("Jan Levinson")
-
-define toby = Character("Toby Flenderson")
-
-define stanley = Character("Stanley Hudson")
-
-define hunter = Character("Hunter Raymond")
-
-default jan_affinity = 0
-default darryl_respect =3
-
-label splashscreen:
-    scene black
-    with dissolve
-    
-    centered "{b}AVISO LEGAL E DE DIREITOS AUTORAIS{/b}\n\n
-    Este é um projeto sem fins lucrativos, desenvolvido exclusivamente para fins didáticos e demonstração de habilidades técnicas no motor Ren'Py.\n\n
-    {i}The Office{/i} e todos os seus personagens, marcas e imagens são de propriedade da {b}NBCUniversal{/b}. Este software não é afiliado, endossado ou patrocinado pelos detentores dos direitos originais.\n\n
-    Este trabalho é um tributo feito por um fâ, com total respeito à obra original."
-
-    pause 3.0 
-    
-    scene black
-    with dissolve
-    
-    return 
-
-
 
 label start:
 
@@ -1585,35 +1541,3 @@ label bad_ending:
     #end game
 
     return
-
-
-screen credits():
-    tag menu 
-    add "black" 
-    
-    vbox:
-        align (0.5, 0.4)
-        spacing 20
-        
-        text "{b}CREDITS{/b}" size 60 xalign 0.5 color "#fff"
-        
-        null height 20
-        
-        text "Developed by: Jonathan S. França" xalign 0.5
-        
-        null height 10
-        
-        text "{b}Technologies used:{/b}" xalign 0.5
-        text "Engine: Ren'Py" xalign 0.5 # 
-        text "Language: Python" xalign 0.5 # 
-        
-        null height 10
-        
-        text "Inspired by: The Office (NBCUniversal)" xalign 0.5
-        text "Purpose: Technical Portfolio & Skill Demonstration" xalign 0.5
-        
-    textbutton _("Return"):
-        align (0.5, 0.8)
-        action Return()
-        text_size 40
-        text_hover_color "#00ff00" 
