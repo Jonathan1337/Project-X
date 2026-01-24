@@ -96,18 +96,30 @@ style frame:
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
 screen say(who, what):
+    style_prefix "say"
 
     window:
         id "window"
+        background None
+        xfill False              
+        xalign 0.5
+        yalign 0.9
+        ysize None            
 
-        if who is not None:
+        hbox:
+            xalign 0.5
+            spacing 15
 
-            window:
-                id "namebox"
-                style "namebox"
-                text who id "who"
+            if who is not None:
+                text who + ": " id "who":
+                    yalign 0.5
+                    outlines [(2, "#000000", 0, 0)]
+                    size 33
 
-        text what id "what"
+            text what id "what":
+                yalign 0.5
+                outlines [(2, "#000000", 0, 0)]
+                color "#FFFFFF"
 
 
     ## If there's a side image, display it above the text. Do not display on the
@@ -155,9 +167,9 @@ style say_label:
 style say_dialogue:
     properties gui.text_properties("dialogue")
 
-    xpos gui.dialogue_xpos
-    xsize gui.dialogue_width
-    ypos gui.dialogue_ypos
+    # xpos gui.dialogue_xpos
+    # xsize gui.dialogue_width
+    # ypos gui.dialogue_ypos
 
     adjust_spacing False
 
