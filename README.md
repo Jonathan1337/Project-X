@@ -65,7 +65,7 @@ To optimize the development workflow and eliminate manual tasks, I engineered a 
 Clone o repositório / Clone the repository:
 
 bash
-git clone https://github.com/seu-usuario/get-your-raise.git
+git clone https://github.com/Jonathan1337/Project-X.git
 Baixe o Ren'Py SDK.
 
 Aponte o diretório do projeto no launcher do Ren'Py e clique em "Launch Project".
