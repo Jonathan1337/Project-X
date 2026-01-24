@@ -1,4 +1,4 @@
-# Get Your Raise 1.0 - The Office Visual Novel Tribute
+# Get Your Raise 1.0.1 - The Office Visual Novel Tribute
 
 > *"I’m not superstitious, but I am a little stitious." — Michael Scott*
 
