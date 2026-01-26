@@ -230,7 +230,7 @@ style choice_button_text is button_text
 
 style choice_vbox:
     xalign 0.5
-    ypos 405
+    ypos 700
     yanchor 0.5
 
     spacing gui.choice_spacing
@@ -309,7 +309,7 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
-        textbutton _("Credits") action ShowMenu("credits")
+       # textbutton _("Credits") action ShowMenu("credits")
 
         if main_menu:
 
@@ -356,6 +356,7 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
+    outlines [(0.5, "#000000", 0, 0)]
 
 
 ## Main Menu screen ############################################################
@@ -401,7 +402,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    background None
 
 style main_menu_vbox:
     xalign 1.0
@@ -1214,6 +1215,8 @@ style confirm_button:
 
 style confirm_button_text:
     properties gui.text_properties("confirm_button")
+    outlines [(0.5, "#000000", 0, 0)]
+
 
 
 ## Skip indicator screen #######################################################
