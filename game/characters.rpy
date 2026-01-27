@@ -21,6 +21,3 @@ define toby = Character("Toby Flenderson", who_color="#8b6b2e")
 define stanley = Character("Stanley Hudson", who_color="#64a737")
 
 define hunter = Character("Hunter Raymond", who_color="#485d72")
-
-default jan_affinity = 0
-default darryl_respect =3
