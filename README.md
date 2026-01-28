@@ -50,28 +50,81 @@ To optimize the development workflow and eliminate manual tasks, I engineered a 
 
 ```text
 /
-├── game/                   # Core game files (Ren'Py assets & scripts)
-│   ├── images/
-│   ├── audio/
-│   ├── script.rpy          # Main narrative flow
-│   └── screens.rpy         # UI Layout definitions
+├── game/                                # Core game files (Ren'Py assets & scripts)
+│   ├── images/                          # Game images and backgrounds
+│   ├── audio/                           # Music and sound effects
+│   ├── fonts/                           # Custom fonts
+│   ├── gui/                             # GUI assets
+│   │
+│   ├── script.rpy                       # Main entry point (label start)
+│   ├── characters.rpy                   # Character definitions
+│   ├── screens.rpy                      # UI Layout definitions
+│   ├── gui.rpy                          # GUI configuration
+│   ├── options.rpy                      # Game options and config
+│   ├── splashscreen.rpy                 # Initial warning screen
+│   │
+│   ├── scene_1_michael_office.rpy       # Scene 1: Michael's Office
+│   ├── scene_2_meeting_room.rpy         # Scene 2: Meeting Room
+│   ├── scene_3_general_office.rpy       # Scene 3: General Office
+│   ├── scene_4_michael_office.rpy       # Scene 4: Return to Michael's Office
+│   ├── scene_5_phone_call.rpy           # Scene 5: Phone Call with Jan
+│   ├── scene_6_corporate_lobby.rpy      # Scene 6: Corporate Lobby
+│   ├── scene_7_jan_negotiation.rpy      # Scene 7: Negotiation with Jan
+│   ├── scene_8_good_ending.rpy          # Scene 8: Good Ending
+│   └── scene_9_bad_ending.rpy           # Scene 9: Bad Ending
 │
-├── tools/                  # Python Automation Suite ⚙️
-│   ├── printscreemer.py    # Image processing automation
-│   └── script_normalizer.py # Text parsing & normalization
+├── tools/                               # Python Automation Suite ⚙️
+│   ├── printscreemer.py                 # Video frame extraction
+│   ├── script_normalizer.py             # Subtitle parsing & normalization
+│   └── image_compressor.py              # Image compression utility
 │
 └── README.md
-🚀 Como Rodar / How to Run
-Clone o repositório / Clone the repository:
 
-bash
+```
+
+---
+
+## 📐 Convenções de Código / Code Conventions
+
+### Nomenclatura / Naming Conventions
+Este projeto segue o padrão **snake_case** para garantir consistência e legibilidade:
+
+| Elemento | Convenção | Exemplo |
+|----------|-----------|---------|
+| Arquivos de cena | `scene_N_description.rpy` | `scene_1_michael_office.rpy` |
+| Labels | `snake_case` | `label scene_1:`, `label good_ending:` |
+| Variáveis | `snake_case` | `jan_affinity`, `darryl_respect` |
+| Jumps/Calls | `snake_case` | `jump scene_2`, `call good_ending` |
+
+### Estrutura de Cenas / Scene Structure
+Cada arquivo de cena segue o padrão:
+```renpy
+#CENA N: DESCRIÇÃO DA CENA
+
+label scene_N:
+    # Conteúdo da cena
+    jump scene_N+1
+```
+
+---
+
+## 🚀 Como Rodar / How to Run
+
+1. Clone o repositório / Clone the repository:
+```bash
 git clone https://github.com/Jonathan1337/Project-X.git
-Baixe o Ren'Py SDK.
+```
 
-Aponte o diretório do projeto no launcher do Ren'Py e clique em "Launch Project".
+2. Baixe o [Ren'Py SDK](https://www.renpy.org/latest.html).
 
-⚖️ Disclaimer / Aviso Legal
-Non-profit fan project for educational and portfolio purposes only.
-The Office and all related characters, names, and indicia are property of NBCUniversal. This software is not affiliated with, endorsed by, or connected to the original creators.
+3. Aponte o diretório do projeto no launcher do Ren'Py e clique em "Launch Project".
 
-Este é um projeto de fã, sem fins lucrativos, criado estritamente para fins de portfólio e estudo.
+---
+
+## ⚖️ Disclaimer / Aviso Legal
+
+> **Non-profit fan project for educational and portfolio purposes only.**
+> *The Office* and all related characters, names, and indicia are property of NBCUniversal. This software is not affiliated with, endorsed by, or connected to the original creators.
+
+> **Este é um projeto de fã, sem fins lucrativos, criado estritamente para fins de portfólio e estudo.**
+> *The Office* e todos os personagens, nomes e elementos relacionados são propriedade da NBCUniversal.
