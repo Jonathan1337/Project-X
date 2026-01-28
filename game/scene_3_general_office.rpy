@@ -1,6 +1,6 @@
 #CENA 3: Escritorio geral
 
-label scene3:
+label scene_3:
     scene frame_609
     with dissolve
 
@@ -199,6 +199,6 @@ label scene3:
 
     darryl "I got to send some e-mails."
 
-    jump scene4
+    jump scene_4
 
 

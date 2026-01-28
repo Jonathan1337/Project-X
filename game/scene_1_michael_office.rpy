@@ -1,6 +1,6 @@
 #CENA 1: INICIO A PARTIR DA SALA DO MICHAEL
 
-label scene1:
+label scene_1:
 
     stop music fadeout 1.0
 
@@ -77,5 +77,5 @@ label scene1:
 
     michael "Totally throws them off."
 
-    jump scene2
+    jump scene_2
 

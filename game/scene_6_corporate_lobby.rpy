@@ -1,6 +1,6 @@
 #CENA 6: Recepção no escritório central
 
-label scene6:
+label scene_6:
     
     play music "Pam’s-Desk--Ambience.ogg"
 
@@ -73,5 +73,5 @@ label scene6:
 
     darryl"I just can't help myself."
 
-    jump scene7
+    jump scene_7
 

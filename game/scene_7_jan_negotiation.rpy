@@ -1,6 +1,6 @@
 #CENA 7: NEGOCIAÇÃO COM A JAN
 
-label scene7:
+label scene_7:
 
     scene frame_1384
     with dissolve

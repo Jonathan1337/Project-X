@@ -1,6 +1,6 @@
 #CENA 5: Michael falando com a Jan ao telefone
 
-label scene5:
+label scene_5:
 
     scene frame_1113
     with dissolve
@@ -90,5 +90,5 @@ label scene5:
 
     michael "Fine."
 
-    jump scene6
+    jump scene_6
 

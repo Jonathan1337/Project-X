@@ -11,4 +11,4 @@ default threatened_sex = False
 # o label start está em scene_1.rpy
 
 label start:
-    jump scene1
+    jump scene_1

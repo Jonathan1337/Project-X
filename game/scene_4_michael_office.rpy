@@ -1,6 +1,6 @@
 #CENA 4: Retorno a sala do michael
 
-label scene4:
+label scene_4:
 
     scene frame_684
     with dissolve
@@ -519,5 +519,5 @@ label scene4:
 
     michael "I am making it happen, sergeant."
 
-    jump scene5
+    jump scene_5
 

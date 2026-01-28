@@ -1,6 +1,6 @@
 #CENA 2: Sala de reuniões
 
-label scene2:
+label scene_2:
 
     scene frame_509
     with dissolve
@@ -137,7 +137,7 @@ label scene2:
 
     darryl "This is too good."
 
-    jump scene3
+    jump scene_3
 
 
 
