@@ -50,6 +50,44 @@ define config.has_sound = True
 define config.has_music = True
 define config.has_voice = True
 
+init python:
+
+    # 1. Cria um dicionário vazio para guardar { "id": "caminho_completo" }
+    voice_map = {}
+
+    def mapear_arquivos_de_voz():
+        # 2. Varre todos os arquivos do jogo
+        for file in renpy.list_files():
+            
+            # 3. Filtra: Queremos apenas arquivos dentro de audio/voice/ que sejam OGG
+            if file.startswith("audio/voice/") and file.endswith(".ogg"):
+                
+                # O arquivo é algo tipo: audio/voice/scene_1/scene_1_2d85d9a7.mp3
+                
+                # 4. Extrai o ID do nome do arquivo
+                # Pegamos apenas o nome do arquivo, removendo o caminho das pastas
+                nome_arquivo = file.split("/")[-1]
+                
+                # Remove a extensão .ogg para obter o ID completo
+                # Ex: "scene_1_2d85d9a7.ogg" -> "scene_1_2d85d9a7"
+                # (Isso é necessário porque o dialogue.tab usa o ID completo)
+                id_arquivo = nome_arquivo[:-4]
+                
+                # 5. Salva no dicionário
+                voice_map[id_arquivo] = file
+
+    # Executa essa função imediatamente na inicialização
+    mapear_arquivos_de_voz()
+
+    # 6. Esta é a função que o config.auto_voice vai usar
+    def buscar_voz(id):
+        # Ele tenta encontrar o ID no nosso mapa
+        return voice_map.get(id)
+
+# Define a configuração para usar nossa busca inteligente
+define config.auto_voice = buscar_voz
+
+#define config.auto_voice = "audio/voice/scene/{id}.mp3"
 
 ## To allow the user to play a test sound on the sound or voice channel,
 ## uncomment a line below and use it to set a sample sound to play.
