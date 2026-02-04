@@ -37,7 +37,14 @@ Para este projeto, o processo de implementação das vozes seguiu estas etapas e
 Utilizamos a ferramenta nativa do Ren'Py Launcher (**Generate Translations**) para gerar o arquivo `dialogue.tab` na raiz do projeto. Este arquivo contém a relação entre o texto apresentado e seu ID único.
 
 ### Passo 2: Extração do Áudio do Episódio
-Obtivemos o episódio original e extraímos a faixa de áudio completa (geralmente usando ffmpeg ou software de edição) para um arquivo de alta qualidade (ex: `.mp3` ou `.wav`).
+Ferramenta utilizada: **`tools/audio_split.py`**
+
+Este script Python extrai a faixa de áudio completa de um arquivo de vídeo:
+1.  Configure `INPUT_PATH` com o caminho do vídeo (MP4, MKV, etc.).
+2.  Execute o script.
+3.  O áudio será salvo como `.mp3` no mesmo diretório.
+
+> **Requisito:** O script utiliza a biblioteca `moviepy` e requer o **FFmpeg** instalado no sistema.
 
 ### Passo 3: Fatiamento do Áudio (Slicing)
 Ferramenta utilizada: **`tools/audio_slicer.py`**
@@ -70,6 +77,7 @@ Implementamos uma função Python em `init python` que:
 
 | Ferramenta | Descrição | Dependências |
 | :--- | :--- | :--- |
+| `tools/audio_split.py` | Extrai áudio de arquivos de vídeo | Python, moviepy, FFmpeg |
 | `tools/audio_slicer.py` | Corta áudios longos baseado em legendas .SRT | Python, pydub, FFmpeg |
 | `tools/voice_renamer.py` | Associa áudios a IDs do Ren'Py e organiza pastas | Python standard lib |
 | `game/options.rpy` | Configuração do jogo que carrega as vozes dinamicamente | Ren'Py Engine |

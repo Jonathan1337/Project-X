@@ -1,4 +1,4 @@
-# Get Your Raise 1.1.0 - The Office Visual Novel Tribute
+# Get Your Raise 1.2.0 - The Office Visual Novel Tribute
 
 > *"I’m not superstitious, but I am a little stitious." — Michael Scott*
 
@@ -27,6 +27,7 @@ Para otimizar o fluxo de desenvolvimento e eliminar tarefas manuais, desenvolvi 
 *   **`audio_slicer.py` (Audio Slicing Automation):** Script que utiliza timestamps de arquivos `.srt` para recortar automaticamente faixas de áudio longas em clipes individuais de fala, sincronizados com o diálogo.
 *   **`voice_renamer.py` (Voice Asset Management):** Ferramenta de organização que utiliza *Fuzzy Matching* para associar arquivos de áudio recortados às linhas de diálogo do script Ren'Py, renomeando-os automaticamente com o ID único da cena (ex: `scene_1_2d85d9a7.ogg`) e movendo-os para a estrutura de pastas correta.
 *   **`audio_converter.py` (Asset Optimization):** Utilitário de conversão em massa (Batch Processing) que transcodifica arquivos MP3 para OGG Vorbis, otimizando o tamanho dos assets de áudio sem perda perceptível de qualidade.
+*   **`auto_translator/` (Automated Translation):** Sistema de tradução automatizada que utiliza **Ollama** (IA local) para traduzir arquivos de localização do Ren'Py. O script identifica padrões de tradução vazios via *Regex* e preenche automaticamente com traduções geradas pelo modelo de linguagem, acelerando o processo de localização (i18n).
 
 ---
 
@@ -51,6 +52,7 @@ To optimize the development workflow and eliminate manual tasks, I engineered a 
 *   **`audio_slicer.py` (Audio Slicing Automation):** A script utilizing `.srt` file timestamps to automatically slice long audio tracks into individual speech clips, perfectly synchronized with expected dialogue.
 *   **`voice_renamer.py` (Voice Asset Management):** A management tool that uses *Fuzzy Matching* to query sliced audio files against Ren'Py script dialogue lines, automatically renaming them with unique scene IDs (e.g., `scene_1_2d85d9a7.ogg`) and sorting them into the correct directory structure.
 *   **`audio_converter.py` (Asset Optimization):** A batch processing utility that transcoding MP3 files to OGG Vorbis, optimizing audio asset size without noticeable quality loss.
+*   **`auto_translator/` (Automated Translation):** An automated translation system leveraging **Ollama** (local AI) to translate Ren'Py localization files. The script identifies empty translation patterns via *Regex* and automatically fills them with AI-generated translations, accelerating the localization (i18n) process.
 
 ---
 
@@ -88,7 +90,11 @@ To optimize the development workflow and eliminate manual tasks, I engineered a 
 │   ├── audio_split.py                   # Video audio extraction
 │   ├── audio_slicer.py                  # Audio slicing utility
 │   ├── voice_renamer.py                 # Voice asset management
-│   └── audio_converter.py               # Audio format converter
+│   ├── audio_converter.py               # Audio format converter
+│   ├── AUTO_VOICE_GUIDE.md              # Auto Voice documentation
+│   └── auto_translator/                 # Automated Translation Tool 🌐
+│       ├── auto_translator.py           # Main translation script
+│       └── auto_translator.md           # Tool documentation
 │
 └── README.md
 
