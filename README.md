@@ -56,6 +56,20 @@ To optimize the development workflow and eliminate manual tasks, I engineered a 
 
 ---
 
+## Localização (pt-BR) + Auto Translator
+
+O jogo agora possui opção de idioma (EN/PT-BR) e uma tradução pt-BR baseada nos arquivos gerados pelo Ren'Py em `game/tl/<idioma>/`.
+
+Também incluí o **Auto Translator** (`tools/auto_translator/auto_translator.py`), um script em Python que preenche automaticamente strings vazias desses arquivos de tradução usando um modelo rodando localmente via **Ollama** (offline).
+
+### Quick start
+1) Ren'Py Launcher → **Generate Translations** → informe o idioma (ex.: `portuguese`), gerando/atualizando `game/tl/portuguese/`.
+2) Instale e inicie o Ollama: `ollama serve`.
+3) Baixe o modelo padrão: `ollama pull gemma3:4b`.
+4) Rode em modo simulação: `python tools/auto_translator/auto_translator.py --input game/tl/portuguese --dry-run` e depois sem `--dry-run`.
+
+---
+
 ## 📂 Estrutura do Projeto / Project Structure
 
 ```text
@@ -85,14 +99,14 @@ To optimize the development workflow and eliminate manual tasks, I engineered a 
 │   ├── options.rpy                      # Game options and config
 │   └── splashscreen.rpy                 # Initial warning screen
 │
-├── tools/                               # Python Automation Suite ⚙️
+├── tools/                               # Python Automation Suite 
 │   ├── printscreemer.py                 # Video frame extraction
 │   ├── audio_split.py                   # Video audio extraction
 │   ├── audio_slicer.py                  # Audio slicing utility
 │   ├── voice_renamer.py                 # Voice asset management
 │   ├── audio_converter.py               # Audio format converter
 │   ├── AUTO_VOICE_GUIDE.md              # Auto Voice documentation
-│   └── auto_translator/                 # Automated Translation Tool 🌐
+│   └── auto_translator/                 # Automated Translation Tool 
 │       ├── auto_translator.py           # Main translation script
 │       └── auto_translator.md           # Tool documentation
 │

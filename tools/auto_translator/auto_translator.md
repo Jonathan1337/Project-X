@@ -33,8 +33,12 @@ ollama pull gemma3:4b
 
 > **Nota:** O modelo `gemma3:4b` é utilizado por padrão por ser leve e eficiente, mas outros modelos como `llama3`, `mistral` ou `gemma2` também podem ser usados.
 
-### 3. Ren'Py SDK
-O Ren'Py SDK é necessário para gerar os arquivos base de tradução antes de usar o auto_translator. Baixe em: https://renpy.org/
+> [!IMPORTANT]
+> O servidor Ollama **DEVE** estar rodando em segundo plano para o script funcionar. Antes de executar o `auto_translator.py`, abra um terminal separado e execute:
+> ```bash
+> ollama serve
+> ```
+> Mantenha este terminal aberto durante toda a execução do script.
 
 ---
 

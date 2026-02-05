@@ -365,12 +365,35 @@ style navigation_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
+image slideshow:
+    "main_menu_a.jpg" with dissolve
+    pause 3.0
+    "main_menu_b.jpg" with dissolve
+    pause 3.0
+    "main_menu_c.jpg" with dissolve
+    pause 3.0
+    "main_menu_d.webp" with dissolve
+    pause 3.0
+    "main_menu_e.jpg" with dissolve
+    pause 3.0
+    "main_menu_f.jpg" with dissolve
+    pause 3.0
+    "main_menu_g.jpg" with dissolve
+    pause 3.0
+    "main_menu_h.webp" with dissolve
+
+    repeat
+    
+
 screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add gui.main_menu_background
+    style_prefix "main_menu"
+
+    #add gui.main_menu_background
+    add "slideshow"
 
     ## This empty frame darkens the main menu.
     frame:
