@@ -15,7 +15,7 @@ O jogador assume o papel de um funcionário tentando conseguir um aumento, onde 
 ### 🧩 Competências Técnicas (Game Dev)
 *   **Gestão de Estado Complexa:** Implementação de variáveis de rastreamento (`jan_affinity`, `darryl_respect`) que controlam a ramificação da história (branching narrative) em tempo real.
 *   **Integração Python/Ren'Py:** Uso de blocos `python:` nativos para lógica condicional avançada e manipulação de dados persistentes.
-*   **Arquitetura Modular:** Separação de responsabilidades com scripts dedicados para definições, telas (`screens.rpy`) e fluxo narrativo (`script.rpy`), facilitando a manutenção.
+*   **Arquitetura Modular:** Separação de responsabilidades com scripts dedicados: definições de personagens (`characters.rpy`), cenas narrativas individuais (`scenes/scene_*.rpy`), variáveis globais (`script.rpy`), tela de aviso inicial (`splashscreen.rpy`), seleção de idioma (`language_select.rpy`) e interface gráfica (`screens.rpy`), facilitando a manutenção e escalabilidade.
 *   **UI/UX Personalizada:** Customização completa da interface gráfica (GUI) para imersão temática.
 *   **Sistema de Auto Voice:** Implementação de um sistema dinâmico de mapeamento de voz (`options.rpy`) que carrega automaticamente arquivos de áudio baseados nos IDs únicos de diálogo, eliminando a necessidade de tags manuais `voice` em cada linha.
 
@@ -40,7 +40,7 @@ The player takes on the role of an employee trying to negotiate a raise, where e
 ### 🧩 Technical Competencies (Game Dev)
 *   **Complex State Management:** Implementation of tracking variables (`jan_affinity`, `darryl_respect`) that control narrative branching in real-time.
 *   **Python/Ren'Py Integration:** Utilization of native `python:` blocks within the engine for advanced conditional logic and persistent data manipulation.
-*   **Modular Architecture:** Separation of concerns with dedicated scripts for definitions, screens (`screens.rpy`), and narrative flow (`script.rpy`), ensuring maintainability.
+*   **Modular Architecture:** Separation of concerns with dedicated scripts: character definitions (`characters.rpy`), individual narrative scenes (`scenes/scene_*.rpy`), global variables (`script.rpy`), splash screen (`splashscreen.rpy`), language selection (`language_select.rpy`), and GUI layout (`screens.rpy`), ensuring maintainability and scalability.
 *   **Custom UI/UX:** Full customization of the Graphical User Interface (GUI) for thematic immersion.
 *   **Auto Voice System:** Implementation of a dynamic voice mapping system (`options.rpy`) that automatically loads audio files based on unique dialogue IDs, eliminating the need for manual `voice` tags on every line.
 
@@ -76,12 +76,12 @@ Também incluí o **Auto Translator** (`tools/auto_translator/auto_translator.py
 /
 ├── dialogue.tab                         # Dialogue ID mapping file
 ├── game/                                # Core game files (Ren'Py assets & scripts)
-│   ├── images/                          # Game images and backgrounds
+│   ├── images/                          # Extracted frames and menu backgrounds
 │   ├── audio/                           # Music and sound effects
 │   │   └── voice/                       # Auto Voice audio files (OGG)
 │   ├── fonts/                           # Custom fonts
 │   ├── gui/                             # GUI assets
-│   ├── scenes/                          # Narrative scenes scripts
+│   ├── scenes/                          # Narrative scene scripts (modular)
 │   │   ├── scene_1_michael_office.rpy
 │   │   ├── scene_2_meeting_room.rpy
 │   │   ├── scene_3_general_office.rpy
@@ -92,21 +92,27 @@ Também incluí o **Auto Translator** (`tools/auto_translator/auto_translator.py
 │   │   ├── scene_8_good_ending.rpy
 │   │   └── scene_9_bad_ending.rpy
 │   │
-│   ├── script.rpy                       # Main entry point (label start)
-│   ├── characters.rpy                   # Character definitions
+│   ├── tl/                              # Translation files (i18n)
+│   │   └── portuguese/                  # pt-BR localization
+│   │
+│   ├── script.rpy                       # Global variables & entry point (jump scene_1)
+│   ├── characters.rpy                   # Character definitions (name, color, voice_tag)
 │   ├── screens.rpy                      # UI Layout definitions
 │   ├── gui.rpy                          # GUI configuration
-│   ├── options.rpy                      # Game options and config
+│   ├── options.rpy                      # Game options, config & Auto Voice setup
+│   ├── language_select.rpy              # Language selection screen (EN/PT-BR)
 │   └── splashscreen.rpy                 # Initial warning screen
 │
-├── tools/                               # Python Automation Suite 
+├── tools/                               # Python Automation Suite
 │   ├── printscreemer.py                 # Video frame extraction
 │   ├── audio_split.py                   # Video audio extraction
 │   ├── audio_slicer.py                  # Audio slicing utility
 │   ├── voice_renamer.py                 # Voice asset management
+│   ├── voice_matcher.py                 # Fuzzy voice-dialogue matching
 │   ├── audio_converter.py               # Audio format converter
+│   ├── image_compressor.py              # Image optimization utility
 │   ├── AUTO_VOICE_GUIDE.md              # Auto Voice documentation
-│   └── auto_translator/                 # Automated Translation Tool 
+│   └── auto_translator/                 # Automated Translation Tool
 │       ├── auto_translator.py           # Main translation script
 │       └── auto_translator.md           # Tool documentation
 │
