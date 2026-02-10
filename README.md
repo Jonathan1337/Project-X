@@ -1,4 +1,4 @@
-# Get Your Raise 1.2.1 - The Office Visual Novel Tribute
+# Get Your Raise 1.2.2 - The Office Visual Novel Tribute
 
 > *"I’m not superstitious, but I am a little stitious." — Michael Scott*
 
@@ -110,7 +110,6 @@ Também incluí o **Auto Translator** (`tools/auto_translator/auto_translator.py
 │   ├── voice_renamer.py                 # Voice asset management
 │   ├── voice_matcher.py                 # Fuzzy voice-dialogue matching
 │   ├── audio_converter.py               # Audio format converter
-│   ├── image_compressor.py              # Image optimization utility
 │   ├── AUTO_VOICE_GUIDE.md              # Auto Voice documentation
 │   └── auto_translator/                 # Automated Translation Tool
 │       ├── auto_translator.py           # Main translation script

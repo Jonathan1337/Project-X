@@ -5,6 +5,33 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/),
 e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
+## [1.2.2] - 2026-02-10
+
+### Corrigido
+- **i18n:** Escape de `%` nas strings em pt-BR (`10%` → `10%%`) para evitar `ValueError: incomplete format`
+- **UI:** Correção do slideshow no main menu
+
+### Modificado
+- **Characters:** Melhora na legibilidade e remoção de code smells em `characters.rpy`
+- **Docs:** Correção do README (estrutura de projeto, arquitetura modular, arquivos faltantes)
+
+---
+
+## [1.2.1] - 2026-02-04
+
+### Adicionado
+- **Slideshow no Main Menu:** Implementação de slideshow dinâmico na tela principal
+- **Seletor de Idiomas:** Tela de seleção de idioma (EN/PT-BR) via `language_select.rpy`
+- **Localização pt-BR:** Tradução completa do jogo para Português Brasileiro
+
+### Modificado
+- README atualizado para versão 1.2.1
+
+### Removido
+- Scripts desnecessários removidos do repositório
+
+---
+
 ## [1.2.0] - 2026-02-04
 
 ### Adicionado
@@ -72,6 +99,8 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 
 ---
 
+[1.2.2]: https://github.com/Jonathan1337/Project-X/compare/v1.2.1...v1.2.2
+[1.2.1]: https://github.com/Jonathan1337/Project-X/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/Jonathan1337/Project-X/compare/v1.0.2...v1.2.0
 [1.0.2]: https://github.com/Jonathan1337/Project-X/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/Jonathan1337/Project-X/compare/v1.0.0...v1.0.1
