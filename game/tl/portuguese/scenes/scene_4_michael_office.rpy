@@ -184,7 +184,7 @@ translate portuguese scene_4_197f90a5:
 translate portuguese scene_4_2412561c:
 
     # darryl "I am serious, Mike. That's a 10-percent raise."
-    darryl "Eu estou falando sério, Mike. Isso é um aumento de 10%."
+    darryl "Eu estou falando sério, Mike. Isso é um aumento de 10%%."
 
 # game/scenes/scene_4_michael_office.rpy:165
 translate portuguese scene_4_d0592b94:

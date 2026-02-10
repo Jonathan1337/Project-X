@@ -388,7 +388,7 @@ translate portuguese scene_7_95717b9d:
 translate portuguese scene_7_ef8b6bc2:
 
     # jan "I can offer you a 12-percent raise,"
-    jan "Eu posso oferecer a você um aumento de 12%,"
+    jan "Eu posso oferecer a você um aumento de 12%%,"
 
 # game/scenes/scene_7_jan_negotiation.rpy:351
 translate portuguese scene_7_dc6f0df0:
@@ -436,7 +436,7 @@ translate portuguese scene_7_4c560dc2:
 translate portuguese scene_7_19336b40:
 
     # michael "I would like a 15-percent raise."
-    michael "Eu gostaria de um aumento de 15%."
+    michael "Eu gostaria de um aumento de 15%%."
 
 # game/scenes/scene_7_jan_negotiation.rpy:389
 translate portuguese scene_7_2cb0faf8:
@@ -454,7 +454,7 @@ translate portuguese scene_7_1b380de2:
 translate portuguese scene_7_3c14ce5a:
 
     # michael "Actually, I want 20 percent! I'm worth it!"
-    michael "Na verdade, eu quero 20%! Eu mereço!"
+    michael "Na verdade, eu quero 20%%! Eu mereço!"
 
 # game/scenes/scene_7_jan_negotiation.rpy:405
 translate portuguese scene_7_75026b2b:
