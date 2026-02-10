@@ -381,6 +381,7 @@ image slideshow:
     "main_menu_g.jpg" with dissolve
     pause 3.0
     "main_menu_h.webp" with dissolve
+    pause 3.0
 
     repeat
     
